@@ -10,14 +10,16 @@ package banco;
  */
 public class Admin {
      private int id;
-    private String nombre;
+    private String nombre = "Admin";
+    private String password= "Admin";
 
-    public Admin(int id, String nombre) {
-        this.id = id;
+    public Admin( String nombre, String password) {
+        
         this.nombre = nombre;
+        this.password = password;
     }
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
+    public String getpassword() {return password;}
+    public void setpassword(int id) {this.password = password;}
     public String getNombre() {return nombre;}
     public void setNombre(String nombre) {this.nombre = nombre;}
     

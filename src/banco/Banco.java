@@ -4,6 +4,8 @@
  */
 package banco;
 import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
 /**
  *
  * @author Alonso
@@ -17,18 +19,17 @@ public class Banco {
         // TODO code application logic here
         Scanner leer =new Scanner(System.in);
         
-        int opcion=0;
+        PantallaPrincipal mostrarPantalla1 =new PantallaPrincipal();
         
-        System.out.println("-----Bienvenido-----");
-        System.out.println("Digite su Usuario;");
-        String UsuarioLog = leer.nextLine();
-        System.out.println("Digite su Contrasena;");
-        String passwordLog = leer.nextLine();
-        
-        
-        
-        
-        
+        mostrarPantalla1.show();
+        mostrarPantalla1.setTitle("Login");
+        mostrarPantalla1.setDefaultCloseOperation(PantallaPrincipal.EXIT_ON_CLOSE);
+         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (screenSize.width - mostrarPantalla1.getWidth()) / 2;
+        int y = (screenSize.height - mostrarPantalla1.getHeight()) / 2;
+
+        // Establecer las coordenadas de la ventana
+        mostrarPantalla1.setLocation(x, y);
         
         
         
